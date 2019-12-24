@@ -8,3 +8,6 @@ This tutorial guides one through the following:
 Start with:
 1. Setup Tutorial.md
 2. Linux Tutorial.ipynb
+3. [Python Tutorial](https://www.learnpython.org/)
+
+Use a [code visualizer](http://pythontutor.com/visualize.html#mode=edit) to help understand what is happening under the hood.
