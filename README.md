@@ -1,13 +1,13 @@
-### Development Tutorial
+### Python Data Science Tutorial
 
 This tutorial guides one through the following:
-1. Setting up their development system
-2. Introducing Linux
-3. Introducing Python
+1. Setting up their system to have useful tools for data science, machine learning, and python development
+2. Learning the basics of system administration, linux, shell, configuration files, workflow practices, and vim text
+   editor
+3. Learning Python's syntax
+4. Exploring data science and machine learning concepts
 
 Start with:
-1. [Setup Tutorial.md](https://github.com/benjaminykim/dev_tut/blob/master/Setup%20Tutorial.md)
+1. [Development System Setup Tutorial.md](https://github.com/benjaminykim/dev_tut/blob/master/Setup%20Tutorial.md)
 2. Linux Tutorial.ipynb (open using `jupyer notebook`)
-3. [Python Tutorial](https://www.learnpython.org/)
-
-Use a [code visualizer](http://pythontutor.com/visualize.html#mode=edit) to help understand what is happening under the hood.
+3. Python Tutorial.ipynb (open using `jupyter notebook`)
