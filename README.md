@@ -63,11 +63,11 @@ To verify that it works, quit your Zshell process entirely (CMD + Q) and restart
 ## 4. Text Editor - ATOM
 We will initially edit text using Atom. It is a very straightforward text editor. Install [here](https://atom.io/).
 
-# 5. Python Web Interpreter - JUPYTER NOTEBOOK
-## 5a. Anaconda
+## 5. Python Web Interpreter - JUPYTER NOTEBOOK
+### 5a. Anaconda
 Jupyter Notebook is a data science tool for creating interactive, visual code stories. It is used for data visualization, code sharing, education, and data science purposes. The best long term way to use Jupyter Notebook is through the package manager and data science platform [Anaconda](https://www.anaconda.com/why-anaconda/). There is extensive utility in using Conda, and I recommend it if one's primary use for programming is for data science -especially more so if Python or R are the only languages necessary to the user. Conda handles library installation and version control. This allows users to quickly switch in between different versions of donwloaded packages, as data science or machine learning projects can require libraries of different versions (Tensorflow 1.14/2.0, Python 2.7/3+, or Numpy). If you choose Conda to handle your package management, follow the instructions on the link provided.
 
-## 5b. Virtualenv
+### 5b. Virtualenv
 The alternative to using Conda is to download Jupyter Notebook via python's pip3 tool. This is not a hassle; it is as easy as running the commands:
 >`python3 -m pip install --upgrade pip`<br>
 `python3 -m pip install jupyter`
@@ -75,7 +75,7 @@ The alternative to using Conda is to download Jupyter Notebook via python's pip3
 To alternate between different library versions in this method, virtualenv is required.
 
 
-## 5c. Overview
+### 5c. Overview
 [Read about why Conda is superior to virtualenv](https://stackoverflow.com/questions/34398676/does-conda-replace-the-need-for-virtualenv). [Here is an example of how to use virtualenv, conda and pipenv](https://medium.com/@krishnaregmi/pipenv-vs-virtualenv-vs-conda-environment-3dde3f6869ed).
 
 For the purposes of these notebooks, virtualenv is sufficient. You may assume that we are using Python 3+ and that all libraries are up to date. If they are not, we will list the version of the packages used.
