@@ -192,7 +192,7 @@ Now we will save the file. In order to save, we must be in `N` normal mode.
 #### Integration:
 Enter your file again using `vim`. Add some more text to the file, save and exit. Now print the contents of the file to standard output. In module `5.c Configure Your Tmux` we introduce a command that can accomplish this task for you.
 
-### 7b. Commands
+### 8b. Commands
 Navigating in Vim is challenging but rewarding. Never use the arrow keys to navigate inside your Vim environment. Instead use `h` `j` `k` `l` as Left, Down, Up, Right. I use mnemonic devices `J goes DOWNtown` and `Kite Up` for vertical navigation and the spatial relation of `h` and `l` for horizontal. ***Never use your arrow keys***.
 
 To go one word forward, use `w`; one word back, use `b`. To go x words foward/back, enter the number `x` and `w`/`b`.
@@ -232,7 +232,7 @@ Use `Shift + Z + Z` to write and quite your file. If there are no changes, it wi
 
 This is an extremely thorough beginners look at Vim, but it will open doors for 95% of typical usecase in the editor. However, this is not a comprehensive capture of Vim. There is so much more one can do...
 
-### 7c. Configure your Vim
+### 8c. Configure your Vim
 Run `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/.vimrc -o .vimrc -s`
 Your Vim is now configured. Check out the contents again and skim through things. The three things to take away are:
 1. You can now enter `N` mode using `jk` or `kj` in `I` mode.
