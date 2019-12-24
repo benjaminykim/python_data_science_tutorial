@@ -6,5 +6,5 @@ This tutorial guides one through the following:
 3. Introducing Python
 
 Start with:
-1. Setup Tutorial.ipynb
+1. Setup Tutorial.md
 2. Linux Tutorial.ipynb
