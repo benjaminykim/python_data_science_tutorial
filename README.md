@@ -1,7 +1,15 @@
 
 # Development Setup Tutorial
 
-Skip 1/2 for Linux Distribution Operating systems. If you are on Windows, download a virtual machine (virtualbox) and boot a Linux Distribution on the machine. These tutorials are designed for MacOS.
+I've made a learning module to guide those interested in pulling on what I've partially used for my development environment. For heftier projects, I'll use an integrated development environment with a debugger/compiler, but for most Python/Data Science/Machine Learning I write quick scripts that benefit from this type of dev environment. 
+
+While these tutorials are designed for MacOS, there should be little difficulty in migrating towards a Linux OS. Just skip steps 1/2, and use `sudo apt-get install` in place of `brew install`.
+
+If you are on a Windows OS, fear not. You can always use a tool such as VirtualBox or VMWare in order to **emulate** a Linux OS on your computer. Or, you could download a Linux OS distribution onto a flash drive and start there.
+
+Lastly, you are on a Chromebook. In that case, you may be able to access Jupyter Notebooks through the web browser if you can find a service that provides this. I have done it before. Worst case scenario, you may save up for a $100 Lenovo Thinkpad on Craigslist and boot a Linux distro, or you can risk overriding Chromium OS on your book and boot a lightweight Linux Distro on that (it might break your chromebook). 
+
+Google will always be your friend.
 
 ## Table of Contents
 1. Terminal
@@ -12,8 +20,8 @@ Skip 1/2 for Linux Distribution Operating systems. If you are on Windows, downlo
 6. Git
 
 Additional Materials
-1. Terminal Multiplexer
-2. Text Editor - Vim
+7. Terminal Multiplexer
+8. Text Editor - Vim
 
 ## 1. Terminal - ITERM2
 * [What is a terminal? How do I use it?](https://askubuntu.com/questions/38162/what-is-a-terminal-and-how-do-i-open-and-use-it)
@@ -60,7 +68,7 @@ We will initially edit text using Atom. It is a very straightforward text editor
 
 # 5. Python Web Interpreter - JUPYTER NOTEBOOK
 ## 5a. Anaconda
-Jupyter Notebook is a data science tool for creating interactive, visual code stories. It is used for data visualization, code sharing, education, and data science purposes. The best long term way to use Jupyter Notebook is through the package manager and data science platform [Anaconda](https://www.anaconda.com/why-anaconda/). There is extensive utility in using Conda, and I recommend it if one's primary use for programming is for data science -especially more so if Python or R are the only languages necessary to the user. Conda handles library installation and version control. This allows users to quickly switch in between different versions of donwloaded packages, as data science or machine learning projects can require libraries of different versions (Tensorflow 1.14/2.0, Python 2.7/3+, or Numpy). If you choose Conda to handle your package management, follow the instructions on the link provided. ***(Veteran Freebie)***
+Jupyter Notebook is a data science tool for creating interactive, visual code stories. It is used for data visualization, code sharing, education, and data science purposes. The best long term way to use Jupyter Notebook is through the package manager and data science platform [Anaconda](https://www.anaconda.com/why-anaconda/). There is extensive utility in using Conda, and I recommend it if one's primary use for programming is for data science -especially more so if Python or R are the only languages necessary to the user. Conda handles library installation and version control. This allows users to quickly switch in between different versions of donwloaded packages, as data science or machine learning projects can require libraries of different versions (Tensorflow 1.14/2.0, Python 2.7/3+, or Numpy). If you choose Conda to handle your package management, follow the instructions on the link provided.
 
 ## 5b. Virtualenv
 The alternative to using Conda is to download Jupyter Notebook via python's pip3 tool. This is not a hassle; it is as easy as running the commands:
@@ -95,21 +103,25 @@ We can see in your web browser a file system that should include `dev_tut` as a 
 
 ## Big Picture
 There we have it, a development environment on MacOS that will do quite nicely for the time being. On a linux distribution, we can skip steps 1 and 2 as the default terminal on distributions such as Ubuntu are sufficient, and the installation methods are more straightforward than on MacOS. Here's an overview:
-1. We've replaced your terminal to something fancier and more productive
-2. We've installed a program that can easily install/uninstall/upgrade programs on your computer that are important for development
-3. We've replaced our old shell with something fancier and more productive. We've also given you a bunch of shortcuts that will enable you to execute sysadmin tasks with more ease (.zshrc)
-4. We've installed a text editor that is easy to use
+
+***What can we do with all we've done?***
+* We can use iterm2 to manage your system, run programs, code, download libraries, share code, and train AI.
+* We can use brew to deal with installations.
+* We can use zsh to do make everything easier in terminal.
+* We can use atom to write code.
+* We can use jupyter notebook to make beautiful visualizations and write sharable, interactive code
+* We can use github to actually share our files and make sure we're keeping track of our changes for safety
 
 Here's what we haven't done yet
-1. Install a terminal multiplexer (service that makes terminal more efficient in terms of workflow) (TMUX)
-2. Install a terminal embedded text editor and configured it for efficiency/plugins (VIM)
+7. Install a terminal multiplexer (service that makes terminal more efficient in terms of workflow) (TMUX)
+8. Install a terminal embedded text editor and configured it for efficiency/plugins (VIM)
 
 ***Stop here and move on if time is limited.*** Tmux and Neovim are significant time sinks in learning actual programming. They do provide a lot of functionality and awesomesauce, and are definitely worth the investment. However, if you only have 3-15 days to learn, focusing on theory will prove to be far more beneficial than sinking a lot of time in auxillary technologies that don't deepen computational understanding.
 
 # Advanced Development Setup (Optional)
 
-## 5. Terminal Multiplexer - TMUX
-### 5a. Introduction
+## 7. Terminal Multiplexer - TMUX
+### 7a. Introduction
 Install using `brew install tmux`.
 
 Tmux allows users to have multiple 'little terminals' in one main terminal. Formally, it has:
@@ -117,7 +129,7 @@ Tmux allows users to have multiple 'little terminals' in one main terminal. Form
 2. Windows - ideologically identical to a tab in your web browser. A session can have multiple windows and you can navigate between windows.
 3. Panes - a division in your window/session (your window is your session if you have no other windows open). Divide your window vertically/horizontally in order to help with your workflow.
 
-### 5b. Commands
+### 7b. Commands
 Tmux also has something special called a prefix key. This will precede any command specific to tmux. By default, it is `CTRL + B`. I don't like this prefix key and I remap it in my configuration file which is made available to you.
 
 For example, if you wanted to split your window vertically in Tmux, you would hit `CTRL + B` + `"`. To navigate between panes, you would use `<prefix> + o`. To split horizontally, `<prefix> + %`. To kill a pane, `<prefix> + x`.
@@ -126,7 +138,7 @@ Try it for yourself. Run `tmux` and try to split your window vertically. Here ar
 
 Run `exit` when you are done playing with tmux.
 
-### 5c. Configure your Tmux
+### 7c. Configure your Tmux
 I don't like some of the default commands in Tmux. So, I remmapped a bunch of them. I even changed the prefix key from `CTRL + B` to `CTRL + A`. This really only makes a difference if you change `CAPS LOCK` to `CTRL`, which I have done on my Mac (who uses `CAPS LOCK` these days anyway other than to yell at people on basketball forums?). I highly recommend remmapping your `CAPS LOCK` to `CTRL` as it will prove beneficial in VIM.
 
 Anyway, Tmux looks for a configuration file in your home directory. It is typically named `.tmux.conf`. If you were wondering what the `.` in front of a file name implies (think `.zshrc`), it suggests that the file is hidden and not available to users who do not know what they are doing. Since you know what you are doing, you can play with hidden files.
@@ -150,10 +162,8 @@ To see what instructions lie inside of this file, run the command `cat .tmux.con
 |resize pane left|prefix + h|
 |resize pane right|prefix + l|
 
- ***(Veteran Freebie)***
-
-## 6. Text Editor - VIM
-### 6a. Introduction
+## 8. Text Editor - VIM
+### 8a. Introduction
 [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)?oldformat=true) is a text editor used in the command line interface (CLI). ***Vi*** is typically preinstalled in most Unix systems.
 
 To start up Vim, run the command `vim myFirstFile.txt`. You have now entered Vim's development environment.
@@ -182,7 +192,7 @@ Now we will save the file. In order to save, we must be in `N` normal mode.
 #### Integration:
 Enter your file again using `vim`. Add some more text to the file, save and exit. Now print the contents of the file to standard output. In module `5.c Configure Your Tmux` we introduce a command that can accomplish this task for you.
 
-### 6b. Commands
+### 7b. Commands
 Navigating in Vim is challenging but rewarding. Never use the arrow keys to navigate inside your Vim environment. Instead use `h` `j` `k` `l` as Left, Down, Up, Right. I use mnemonic devices `J goes DOWNtown` and `Kite Up` for vertical navigation and the spatial relation of `h` and `l` for horizontal. ***Never use your arrow keys***.
 
 To go one word forward, use `w`; one word back, use `b`. To go x words foward/back, enter the number `x` and `w`/`b`.
@@ -190,7 +200,7 @@ To go x lines up/down, enter the number and `k`/`j`.
 
 Use `Shift + G` for bottom of file, `g + g` for top of file. Shift bottom g-g up.
 
-Enter a valid line number and use `Shift + G` to move to that line. ***Veteran Freebie***
+Enter a valid line number and use `Shift + G` to move to that line.
 
 Use `0` zero to go to the beginning of a line. Use `$` to go to the end. They are opposite spatially on the keyboard to how they move the cursor inline in Vim.
 
@@ -222,5 +232,11 @@ Use `Shift + Z + Z` to write and quite your file. If there are no changes, it wi
 
 This is an extremely thorough beginners look at Vim, but it will open doors for 95% of typical usecase in the editor. However, this is not a comprehensive capture of Vim. There is so much more one can do...
 
-### 6c. Configure your Vim
-
+### 7c. Configure your Vim
+Run `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/.vimrc -o .vimrc -s`
+Your Vim is now configured. Check out the contents again and skim through things. The three things to take away are:
+1. You can now enter `N` mode using `jk` or `kj` in `I` mode.
+    * this ensures your left hand doesn't have to move to much in order to enter `N` mode. This is advantageous because pressing `ESC` to enter normal mode every time can be time consuming.
+2. You can now move text tabularly in `N` mode.
+    * Use `SHIFT + TAB` or `TAB` to move text backward/forward
+3. You can now save using `CTRL + S` in `N` mode. If you remmaped `CAPS LOCK` to `CTRL` as suggested earlier, this becomes even more useful.

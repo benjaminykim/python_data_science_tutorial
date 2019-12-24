@@ -14,7 +14,7 @@ set backspace=indent,eol,start          "make backspace behave in sane manner
 set nocompatible                        "not compatible with vi
 set ttyfast                             "faster redrawing
 " ================ Line Control  =======================================
-	
+
 set wrap                                "enable word wrap
 set wrapmargin=8                        "wrap lines when coming within n characters from side
 set linebreak                           "set soft wrapping
