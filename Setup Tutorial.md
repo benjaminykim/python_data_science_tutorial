@@ -67,6 +67,17 @@ We will initially edit text using Atom. It is a very straightforward text editor
 ### 5a. Anaconda
 Jupyter Notebook is a data science tool for creating interactive, visual code stories. It is used for data visualization, code sharing, education, and data science purposes. The best long term way to use Jupyter Notebook is through the package manager and data science platform [Anaconda](https://www.anaconda.com/why-anaconda/). There is extensive utility in using Conda, and I recommend it if one's primary use for programming is for data science -especially more so if Python or R are the only languages necessary to the user. Conda handles library installation and version control. This allows users to quickly switch in between different versions of donwloaded packages, as data science or machine learning projects can require libraries of different versions (Tensorflow 1.14/2.0, Python 2.7/3+, or Numpy). If you choose Conda to handle your package management, follow the instructions on the link provided.
 
+* Download the command line installer for anaconda [here](https://www.anaconda.com/distribution/#download-section)
+* Once the download finishes, we have a shell script that will install Anaconda. Run this script by using `bash ~/Downloads/[name of shell script]`
+  * The name of your shell script should look like `Anaconda-something-here.sh`
+* Now, we need to tell Zshell where our Anaconda installation resides.
+  * Open your `.zshrc` file using Vim. Run: `vim .zshrc`
+  * Hit `i` and enter `export PATH=~/anaconda3/bin:"$PATH"`
+  * Hit `ESC` and `:wq` + `ENTER` in order to save and exit Vim.
+  * We have just told Zshell where to look in order to use Anaconda by updating our Zshell configuration file.
+
+Let's test that everything is installed with `jupyter-notebook`. Use `CTRL + C` in order to terminate jupyter notebook.
+
 ### 5b. Virtualenv
 The alternative to using Conda is to download Jupyter Notebook via python's pip3 tool. This is not a hassle; it is as easy as running the commands:
 >`python3 -m pip install --upgrade pip`<br>
@@ -74,6 +85,7 @@ The alternative to using Conda is to download Jupyter Notebook via python's pip3
 
 To alternate between different library versions in this method, virtualenv is required.
 
+Let's test that everything is installed with `jupyter notebook`. Use `CTRL + C` in order to terminate jupyter notebook.
 
 ### 5c. Overview
 [Read about why Conda is superior to virtualenv](https://stackoverflow.com/questions/34398676/does-conda-replace-the-need-for-virtualenv). [Here is an example of how to use virtualenv, conda and pipenv](https://medium.com/@krishnaregmi/pipenv-vs-virtualenv-vs-conda-environment-3dde3f6869ed).
@@ -88,16 +100,9 @@ Git is a version control management system. It is a system that manages what ver
 For now:
 * create an account on [Github](https://github.com/)
 * run `git clone https://github.com/benjaminykim/dev_tut.git`
+* throw a star and follow my profile :)
 
 You have just downloaded the files on this repository onto your server. This is where I was storing the configuration files for Zsh and more. This is also where this .README is hosted.
-
-### Integration:
-Now, in your home directory, run the command:
->`jupyter notebook`
-
-Something happens!
-
-We can see in your web browser a file system that should include `dev_tut` as a directory (folder). Alas.
 
 ## Big Picture
 There we have it, a development environment on MacOS that will do quite nicely for the time being. On a linux distribution, we can skip steps 1 and 2 as the default terminal on distributions such as Ubuntu are sufficient, and the installation methods are more straightforward than on MacOS. Here's an overview:
@@ -110,7 +115,7 @@ There we have it, a development environment on MacOS that will do quite nicely f
 * We can use jupyter notebook to make beautiful visualizations and write sharable, interactive code
 * We can use github to actually share our files and make sure we're keeping track of our changes for safety
 
-Here's what we haven't done yet
+***Here's what we haven't done yet***
 
 7. Install a terminal multiplexer (service that makes terminal more efficient in terms of workflow) (TMUX)
 8. Install a terminal embedded text editor and configured it for efficiency/plugins (VIM)
@@ -138,7 +143,7 @@ Try it for yourself. Run `tmux` and try to split your window vertically. Here ar
 Run `exit` when you are done playing with tmux.
 
 ### 7c. Configure your Tmux
-I don't like some of the default commands in Tmux. So, I remmapped a bunch of them. I even changed the prefix key from `CTRL + B` to `CTRL + A`. This really only makes a difference if you change `CAPS LOCK` to `CTRL`, which I have done on my Mac (who uses `CAPS LOCK` these days anyway other than to yell at people on basketball forums?). I highly recommend remmapping your `CAPS LOCK` to `CTRL` as it will prove beneficial in VIM.
+I don't like some of the default commands in Tmux. So, I remmapped a bunch of them. I even changed the prefix key from `CTRL + B` to `CTRL + A`. This really only makes a difference if you change `CAPS LOCK` to `CTRL`, which I have done on my Mac (who uses `CAPS LOCK` these days anyway other than to yell at people on basketball forums?). I highly recommend remapping your `CAPS LOCK` to `CTRL` as it will prove beneficial in VIM.
 
 Anyway, Tmux looks for a configuration file in your home directory. It is typically named `.tmux.conf`. If you were wondering what the `.` in front of a file name implies (think `.zshrc`), it suggests that the file is hidden and not available to users who do not know what they are doing. Since you know what you are doing, you can play with hidden files.
 
@@ -146,6 +151,8 @@ Run the command:
 * `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/.tmux.conf -o .tmux.conf -s`
 
 To see what instructions lie inside of this file, run the command `cat .tmux.conf` in order to peek inside. Read through the output of that command.
+
+Make sure you restart your terminal in order to source the .tmux.conf file.
 
 **here are some .tmux.conf specific commands**
 
@@ -189,12 +196,12 @@ Now we will save the file. In order to save, we must be in `N` normal mode.
 `w` command will write your file (save). `q` command will quit Vim (exit). You may save and exit by `:wq`.
 
 #### Integration:
-Enter your file again using `vim`. Add some more text to the file, save and exit. Now print the contents of the file to standard output. In module `5.c Configure Your Tmux` we introduce a command that can accomplish this task for you.
+Enter your file again using `vim`. Add some more text to the file, save and exit. Now print the contents of the file to standard output. In module 7c Configure Your Tmux we introduce a command that can accomplish this task for you.
 
 ### 8b. Commands
 Navigating in Vim is challenging but rewarding. Never use the arrow keys to navigate inside your Vim environment. Instead use `h` `j` `k` `l` as Left, Down, Up, Right. I use mnemonic devices `J goes DOWNtown` and `Kite Up` for vertical navigation and the spatial relation of `h` and `l` for horizontal. ***Never use your arrow keys***.
 
-To go one word forward, use `w`; one word back, use `b`. To go x words foward/back, enter the number `x` and `w`/`b`.
+To go one word forward, use `w`; one word back, use `b`. To go x words forward/back, enter the number `x` and `w`/`b`.
 To go x lines up/down, enter the number and `k`/`j`.
 
 Use `Shift + G` for bottom of file, `g + g` for top of file. Shift bottom g-g up.
@@ -227,7 +234,7 @@ These all enter insert mode
 * You may cancel highlights by entering command `:noh` (no highlight)
 
 #### Alternative Save and Exit
-Use `Shift + Z + Z` to write and quite your file. If there are no changes, it will not override the write (subtle difference, creates efficiency for large files and updating as you won't need to reupload a file to a remote database just because you wanted to inspect it in Vim).
+Use `Shift + Z + Z` to write and quit your file. If there are no changes, it will not override the write (subtle difference, creates efficiency for large files and updating as you won't need to reupload a file to a remote database just because you wanted to inspect it in Vim).
 
 This is an extremely thorough beginners look at Vim, but it will open doors for 95% of typical usecase in the editor. However, this is not a comprehensive capture of Vim. There is so much more one can do...
 
@@ -238,4 +245,4 @@ Your Vim is now configured. Check out the contents again and skim through things
     * this ensures your left hand doesn't have to move to much in order to enter `N` mode. This is advantageous because pressing `ESC` to enter normal mode every time can be time consuming.
 2. You can now move text tabularly in `N` mode.
     * Use `SHIFT + TAB` or `TAB` to move text backward/forward
-3. You can now save using `CTRL + S` in `N` mode. If you remmaped `CAPS LOCK` to `CTRL` as suggested earlier, this becomes even more useful.
+3. You can now save using `CTRL + S` in `N` mode. If you remapped `CAPS LOCK` to `CTRL` as suggested earlier, this becomes even more useful.
