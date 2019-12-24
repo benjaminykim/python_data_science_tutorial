@@ -1,10 +1,8 @@
 # OH MY ZSH
-export ZSH="/Users/kernel-ares/.oh-my-zsh"
+export ZSH=".oh-my-zsh"
 ZSH_THEME="agnoster"
 plugins=(
 	git
-	zsh-syntax-highlighting
-	zsh-autosuggestions
 	)
 source $ZSH/oh-my-zsh.sh
 
