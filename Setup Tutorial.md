@@ -1,13 +1,13 @@
 
 # Development Setup Tutorial
 
-I've made a learning module to guide those interested in pulling on what I've partially used for my development environment. For heftier projects, I'll use an integrated development environment with a debugger/compiler, but for most Python/Data Science/Machine Learning I write quick scripts that benefit from this type of dev environment. 
+I've made a learning module to guide those interested in pulling on what I've partially used for my development environment. For heftier projects, I'll use an integrated development environment with a debugger/compiler, but for most Python/Data Science/Machine Learning I write quick scripts that benefit from this type of dev environment.
 
 While these tutorials are designed for MacOS, there should be little difficulty in migrating towards a Linux OS. Just skip steps 1/2, and use `sudo apt-get install` in place of `brew install`.
 
 If you are on a Windows OS, fear not. You can always use a tool such as VirtualBox or VMWare in order to **emulate** a Linux OS on your computer. Or, you could download a Linux OS distribution onto a flash drive and start there.
 
-Lastly, you are on a Chromebook. In that case, you may be able to access Jupyter Notebooks through the web browser if you can find a service that provides this. I have done it before. Worst case scenario, you may save up for a $100 Lenovo Thinkpad on Craigslist and boot a Linux distro, or you can risk overriding Chromium OS on your book and boot a lightweight Linux Distro on that (it might break your chromebook). 
+Lastly, you are on a Chromebook. In that case, you may be able to access Jupyter Notebooks through the web browser if you can find a service that provides this. I have done it before. Worst case scenario, you may save up for a $100 Lenovo Thinkpad on Craigslist and boot a Linux distro, or you can risk overriding Chromium OS on your book and boot a lightweight Linux Distro on that (it might break your chromebook).
 
 Google will always be your friend.
 
@@ -45,7 +45,7 @@ Google will always be your friend.
 
 ### 3b. Download Oh-My-Zsh
 * Pimp your Zsh with [this](https://github.com/ohmyzsh/ohmyzsh) framework. Inspect their readme for more information/utility
-* Run the command: 
+* Run the command:
   * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
 ### 3c. Configure Your Shell
@@ -111,6 +111,7 @@ There we have it, a development environment on MacOS that will do quite nicely f
 * We can use github to actually share our files and make sure we're keeping track of our changes for safety
 
 Here's what we haven't done yet
+
 7. Install a terminal multiplexer (service that makes terminal more efficient in terms of workflow) (TMUX)
 8. Install a terminal embedded text editor and configured it for efficiency/plugins (VIM)
 
@@ -172,7 +173,7 @@ Vim is good for quick script writing and fast development. If you need a debugge
 The default user mode is `Normal`. The others are `Insert` and `Visual`. For our notebooks only normal `N` and insert `I` are necessary. You can run commands in `N` normal and write text in `I` insert modes.
 
 * Enter `i` in the keyboard and observe the change from `N` to `I` modes.
-* You may now enter text. 
+* You may now enter text.
 * Enter `My first file`
 
 #### Save and Exit your File (Write and Quit)
