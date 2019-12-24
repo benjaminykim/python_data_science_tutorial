@@ -19,7 +19,7 @@ Google will always be your friend.
 5. Jupyter Notebook
 6. Git
 
-Additional Materials
+## Additional Materials
 7. Terminal Multiplexer
 8. Text Editor - Vim
 
@@ -60,9 +60,6 @@ That can take us down a long tangent that we'll get into in a later notebook. Fo
 
 To verify that it works, quit your Zshell process entirely (CMD + Q) and restart it. Then run the command `ll`. You should see something cool.
 
- ***(Veteran Freebie)***
-
-
 ## 4. Text Editor - ATOM
 We will initially edit text using Atom. It is a very straightforward text editor. Install [here](https://atom.io/).
 
@@ -86,6 +83,7 @@ For the purposes of these notebooks, virtualenv is sufficient. You may assume th
 ## 6. Git - GitHub
 ### 6a. Introduction
 Git is a version control management system. It is a system that manages what version of your files you currently have. You can save work, roll back changes, combine work done by disparate individuals, and deploy projects using Git. It's incredibly powerful and useful for collaboration, personal branding, education, and industry. There will be a separate module just for Git at a later date.
+
 ### 6b. Configuration
 For now:
 * create an account on [Github](https://github.com/)
