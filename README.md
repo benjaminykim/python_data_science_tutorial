@@ -8,6 +8,6 @@ This tutorial guides one through the following:
 4. Exploring data science and machine learning concepts
 
 Start with:
-1. [Development System Setup Tutorial.md](https://github.com/benjaminykim/dev_tut/blob/master/Setup%20Tutorial.md)
+1. [Development System Setup](https://github.com/benjaminykim/dev_tut/blob/master/tutorials/Setup%20Tutorial.md)
 2. Linux Tutorial.ipynb (open using `jupyer notebook`)
 3. Python Tutorial.ipynb (open using `jupyter notebook`)

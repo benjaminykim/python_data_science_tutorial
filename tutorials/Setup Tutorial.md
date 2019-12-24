@@ -56,7 +56,7 @@ Most shells by default search for a configuration file in your home directory. "
 So you'll need to create a file named .zshrc in your home directory in order to provide a start up script for your shell to run once you initiate your command line interpreter (CLI = terminal). However, in order to do so we need to know how to create a file, navigate your system, manipulate files/directories(folders), and execute commands all by using your CLI.
 
 That can take us down a long tangent that we'll get into in a later notebook. For now, run the command:
-* `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/.zshrc -o .zshrc -s`
+* `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/resources/.zshrc -o .zshrc -s`
 
 To verify that it works, quit your Zshell process entirely (CMD + Q) and restart it. Then run the command `ll`. You should see something cool.
 
@@ -148,7 +148,7 @@ I don't like some of the default commands in Tmux. So, I remmapped a bunch of th
 Anyway, Tmux looks for a configuration file in your home directory. It is typically named `.tmux.conf`. If you were wondering what the `.` in front of a file name implies (think `.zshrc`), it suggests that the file is hidden and not available to users who do not know what they are doing. Since you know what you are doing, you can play with hidden files.
 
 Run the command:
-* `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/.tmux.conf -o .tmux.conf -s`
+* `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/resources/.tmux.conf -o .tmux.conf -s`
 
 To see what instructions lie inside of this file, run the command `cat .tmux.conf` in order to peek inside. Read through the output of that command.
 
@@ -239,7 +239,7 @@ Use `Shift + Z + Z` to write and quit your file. If there are no changes, it wil
 This is an extremely thorough beginners look at Vim, but it will open doors for 95% of typical usecase in the editor. However, this is not a comprehensive capture of Vim. There is so much more one can do...
 
 ### 8c. Configure your Vim
-Run `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/.vimrc -o .vimrc -s`
+Run `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/resources/.vimrc -o .vimrc -s`
 Your Vim is now configured. Check out the contents again and skim through things. The three things to take away are:
 1. You can now enter `N` mode using `jk` or `kj` in `I` mode.
     * this ensures your left hand doesn't have to move to much in order to enter `N` mode. This is advantageous because pressing `ESC` to enter normal mode every time can be time consuming.
