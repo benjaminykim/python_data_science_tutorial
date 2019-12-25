@@ -10,6 +10,6 @@ This tutorial guides one through the following:
 
 Start with:
 1. [Development Setup](https://github.com/benjaminykim/dev_tut/blob/master/tutorials/Setup%20Tutorial.md)
-2. [Linux Tutorial](https://raw.githubusercontent.com/benjaminykim/python_data_science_tutorial/master/tutorials/Linux%20Tutorial.md)
+2. [Linux Tutorial](https://github.com/benjaminykim/python_data_science_tutorial/blob/master/tutorials/Linux%20Tutorial.md)
 3. Jupyter Notebook Tutorial (open inside jupyter notebook)
 4. Python Tutorial (open inside jupyter notebook)
