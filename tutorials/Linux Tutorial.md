@@ -14,14 +14,12 @@ Open up your terminal. Currently, where are you in your file system?
 
 `pwd` = print working directory
 
-You should see the name of the directory you are in. It should resemble `/Users/user_name`. You are currently in your home directory.
-
+You should see the name of the directory you are in. It should resemble `/Users/user_name`. You are currently in your home directory.<br>
 Let's see what is inside your home directory. How may we see the contents?
 
 `ls` = list
 
 You should see names of directories and files. To grab more information about these contents, lets use:
-
 `ls -al` = list (all long)
 
 We just configured the property of how we use the `ls` command by passing along some values `a` and `l` denoted by the flag `-`. Try just running `ls -a` and `ls -l` and see what happens.
@@ -77,3 +75,9 @@ Before we begin programming, let's create a reasonable file structure for our Py
 * Create multiple directories by using `mkdir ex00 ex01 ex02`
 
 Training wheels are off now. All of our exercises, notebooks, projects, and git repositories will exist in our code directory. Resist the temptation to open this directory in `Finder`. If you absolutely need to access something in this directory, run `open .`
+
+
+## Conclusion
+Now that we have introduced the basics of system administration, we are ready to explore the features of Jupyter Notebook.
+
+Enter the `python_data_science_tutorial` directory in terminal and run jupyter notebook. In the `tutorials` directory we can open our `Jupyter Notebook Tutorial.ipynb` file.
