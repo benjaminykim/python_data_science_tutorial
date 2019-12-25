@@ -212,7 +212,7 @@ Navigating in Vim is challenging but rewarding. Use `h` `j` `k` `l` as Left, Dow
 * `x` - delete a character
 * `d` deletes from where the cursor is until navigation
   * `d1w` - delete one word
-  * `d2j` - delete two lines down  
+  * `d2j` - delete two lines down
   * `d + Shift + g` - delete until the bottom of the file
 * `d + d` - delete the current line
 * `s` - delete the current character and enters `I` mode
@@ -264,5 +264,5 @@ Your Vim is now configured. Inspect the contents of the `.vimrc` file. The main 
 ***What should I keep in mind?***<br>
 Vim is hard to use, but consistency over time brings efficiency and mastery. Git is an essential toolkit of any modern developer. All configuration files provided are basic, which is out of design as it grants others the freedom to customize these services as they like. Take a look online for what other people have done with their shell, tmux, and vim configurations.
 
-### What's next?
+***What's next?***<br>
 Run jupyter notebook. You may open `Linux Tutorial.ipynb` inside of Jupyter hub for the next tutorial.

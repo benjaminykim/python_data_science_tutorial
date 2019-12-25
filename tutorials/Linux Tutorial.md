@@ -80,4 +80,5 @@ Training wheels are off now. All of our exercises, notebooks, projects, and git 
 ## Conclusion
 Now that we have introduced the basics of system administration, we are ready to explore the features of Jupyter Notebook.
 
+***What's next?***<br>
 Enter the `python_data_science_tutorial` directory in terminal and run jupyter notebook. In the `tutorials` directory we can open our `Jupyter Notebook Tutorial.ipynb` file.
