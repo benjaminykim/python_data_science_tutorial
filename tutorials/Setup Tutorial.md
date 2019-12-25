@@ -1,13 +1,9 @@
 
 # Development Setup Tutorial
 
-I've made a learning module to guide those interested in pulling on what I've partially used for my development environment. For heftier projects, I'll use an integrated development environment with a debugger/compiler, but for most Python/Data Science/Machine Learning I write quick scripts that benefit from this type of dev environment.
+This learning module installs development tools for novice script writers to seasoned engineers. For heftier projects, use an integrated development environment with a debugger, but most Python/Data Science/Machine Learning projects benefit from this type of development environment.
 
-While these tutorials are designed for MacOS, there should be little difficulty in migrating towards a Linux OS. Just skip steps 1/2, and use `sudo apt-get install` in place of `brew install`.
-
-If you are on a Windows OS, fear not. You can always use a tool such as VirtualBox or VMWare in order to **emulate** a Linux OS on your computer. Or, you could download a Linux OS distribution onto a flash drive and start there.
-
-Lastly, you are on a Chromebook. In that case, you may be able to access Jupyter Notebooks through the web browser if you can find a service that provides this. I have done it before. Worst case scenario, you may save up for a $100 Lenovo Thinkpad on Craigslist and boot a Linux distro, or you can risk overriding Chromium OS on your book and boot a lightweight Linux Distro on that (it might break your chromebook).
+While these tutorials are designed for MacOS, there should be little difficulty in migrating to a Linux OS. Just skip steps 1/2, and use `sudo apt-get install` in place of `brew install`.
 
 Google will always be your friend.
 
@@ -15,53 +11,58 @@ Google will always be your friend.
 1. Terminal
 2. Package Management
 3. Shell
-4. Text Editor
+4. Text Editor - atom
 5. Jupyter Notebook
 6. Git
-
-## Additional Materials
 7. Terminal Multiplexer
-8. Text Editor - Vim
+8. Text Editor
+9. Conclusion
 
 ## 1. Terminal - ITERM2
-* [What is a terminal? How do I use it?](https://askubuntu.com/questions/38162/what-is-a-terminal-and-how-do-i-open-and-use-it)
-* [iTerm2](https://iterm2.com/features.html) is a replacement for Terminal. It has a ton of features that prove useful in the development or sysadmin environment.
-* [Comparison of Iterm2 and Terminal](https://medium.com/@xanderdunn/iterm2-vs-terminal-c06976f106ef)
+* What is a terminal? How does one use it?
+  * a terminal has a command line interface that interprets text commands. Users interface with a terminal to run commands in an efficient manner. These commands can alter your system files, run programs, download packages, and more. It is often more efficient to use a terminal than a graphical user interface.
+* What is iterm2?
+  * iterm2 is a replacement for the default terminal installed on MacOS. It includes [features](https://iterm2.com/features.html) that are helpful to the modern developer.
 * Download [here](https://www.iterm2.com/downloads.html)
 
 ## 2. Package Management - HOMEBREW
-* How do I install stuff easily using a terminal? What will manage the packages/libraries/programs that I want on my system?
+* How does one install packages using a terminal? What manages the packages/libraries/programs that I want on my system?
 >[Homebrew](https://brew.sh/) is a free and open-source software package management system that simplifies the installation of software on Apple's macOS operating system and Linux. The name is intended to suggest the idea of building software on the Mac depending on the user's taste.
-* Open Iterm2 and run the command:
+* To install homebrew, open Iterm2, copy and paste the command below, and press enter:
   * `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 ## 3. Shell - ZSHELL
 ### 3a. Download Zsh
-* To understand why you should download Zsh, you should first understand what a shell is and what bash is
+* What is a [shell](https://en.wikipedia.org/wiki/Shell_(computing)?oldformat=true)?
+  * a user interface for the Operating System's processes
+  * shells use a command line interface (CLI) or graphical user interface (GUI)
+* Bash is a Unix shell and command language. MacOS uses bash by default
   >Bash is a command processor that typically runs in a text window where the user types commands that cause actions. Bash can also read and execute commands from a file, called a shell script. Like all Unix shells, it supports filename globbing (wildcard matching), piping, here documents, command substitution, variables, and control structures for condition-testing and iteration. The keywords, syntax, dynamically scoped variables and other basic features of the language are all copied from sh. - [Wikipedia](https://en.wikipedia.org/wiki/Bash_(Unix_shell)?oldformat=true)
-* [Here](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/) is why Zsh proves to be more useful than Bash
-* Run the command:
+* Zshell has features that make it apt for the modern developer. It's features are listed [here](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/)
+* Install:
   * `brew install zsh`
 
 ### 3b. Download Oh-My-Zsh
-* Pimp your Zsh with [this](https://github.com/ohmyzsh/ohmyzsh) framework. Inspect their readme for more information/utility
-* Run the command:
+* [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh) extends the functionality of Zshell by extending the shell and making it compatible with external libraries.
+* Install:
   * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-### 3c. Configure Your Shell
-Most shells by default search for a configuration file in your home directory. "RC" stands for [run commands](http://www.catb.org/jargon/html/R/rc-file.html). For instance:
+### 3c. Configure Zsh
+Most shells - by default - search for a configuration file in your home directory that ends with suffix `rc`. `rc` stands for [run commands](http://www.catb.org/jargon/html/R/rc-file.html). For instance:
 * BASH > .bashrc
 * ZSH > .zshrc
+* VIM > .vimrc
 
-So you'll need to create a file named .zshrc in your home directory in order to provide a start up script for your shell to run once you initiate your command line interpreter (CLI = terminal). However, in order to do so we need to know how to create a file, navigate your system, manipulate files/directories(folders), and execute commands all by using your CLI.
+So you'll need to create a file named .zshrc in your home directory in order to provide a script for your shell to run upon startup. However, in order to do so we need to know how to create a file, navigate your system, manipulate files/directories(folders), and execute commands all by using your CLI.
 
-That can take us down a long tangent that we'll get into in a later notebook. For now, run the command:
-* `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/resources/.zshrc -o .zshrc -s`
+That can take us down a long tangent that we'll get into later. For now, run the command:
+* `curl https://raw.githubusercontent.com/benjaminykim/python_data_science_tutorial/master/resources/.zshrc -o .zshrc -s`
 
-To verify that it works, quit your Zshell process entirely (CMD + Q) and restart it. Then run the command `ll`. You should see something cool.
+To verify that it works, quit your Zshell process entirely `CMD + q` and restart it. Then run the command `ll`. You should see something cool.
 
 ## 4. Text Editor - ATOM
-We will initially edit text using Atom. It is a very straightforward text editor. Install [here](https://atom.io/).
+If you already have a text editor, skip.<br>
+Else, Atom is a very straightforward text editor. Install [here](https://atom.io/).
 
 ## 5. Python Web Interpreter - JUPYTER NOTEBOOK
 ### 5a. Anaconda
@@ -72,11 +73,12 @@ Jupyter Notebook is a data science tool for creating interactive, visual code st
   * The name of your shell script should look like `Anaconda-something-here.sh`
 * Now, we need to tell Zshell where our Anaconda installation resides.
   * Open your `.zshrc` file using Vim. Run: `vim .zshrc`
-  * Hit `i` and enter `export PATH=~/anaconda3/bin:"$PATH"`
+  * Hit `x`. The first line should be uncommented now.
   * Hit `ESC` and `:wq` + `ENTER` in order to save and exit Vim.
   * We have just told Zshell where to look in order to use Anaconda by updating our Zshell configuration file.
 
-Let's test that everything is installed with `jupyter-notebook`. Use `CTRL + C` in order to terminate jupyter notebook.
+Let's test that everything is installed by running command `jupyter-notebook`.<br>
+Use `CTRL + C` in order to terminate jupyter notebook.
 
 ### 5b. Virtualenv
 The alternative to using Conda is to download Jupyter Notebook via python's pip3 tool. This is not a hassle; it is as easy as running the commands:
@@ -92,69 +94,49 @@ Let's test that everything is installed with `jupyter notebook`. Use `CTRL + C` 
 
 For the purposes of these notebooks, virtualenv is sufficient. You may assume that we are using Python 3+ and that all libraries are up to date. If they are not, we will list the version of the packages used.
 
-## 6. Git - GitHub
+## 6. Git - GITHUB
 ### 6a. Introduction
-Git is a version control management system. It is a system that manages what version of your files you currently have. You can save work, roll back changes, combine work done by disparate individuals, and deploy projects using Git. It's incredibly powerful and useful for collaboration, personal branding, education, and industry. There will be a separate module just for Git at a later date.
+Git is a version control management system. You can save work, roll back changes, combine work done by disparate users, and deploy projects using Git. It's incredibly powerful and useful for collaboration, personal branding, education, and industry. There will be a separate module just for Git at a later date. We will use Github as our Git technology.
 
 ### 6b. Configuration
-For now:
+
 * create an account on [Github](https://github.com/)
-* run `git clone https://github.com/benjaminykim/dev_tut.git`
-* throw a star and follow my profile :)
+* run `git clone https://github.com/benjaminykim/python_data_science_tutorial.git`
+* throw a star and follow my profile
 
-You have just downloaded the files on this repository onto your server. This is where I was storing the configuration files for Zsh and more. This is also where this .README is hosted.
-
-## Big Picture
-There we have it, a development environment on MacOS that will do quite nicely for the time being. On a linux distribution, we can skip steps 1 and 2 as the default terminal on distributions such as Ubuntu are sufficient, and the installation methods are more straightforward than on MacOS. Here's an overview:
-
-***What can we do with all we've done?***
-* We can use iterm2 to manage your system, run programs, code, download libraries, share code, and train AI.
-* We can use brew to deal with installations.
-* We can use zsh to do make everything easier in terminal.
-* We can use atom to write code.
-* We can use jupyter notebook to make beautiful visualizations and write sharable, interactive code
-* We can use github to actually share our files and make sure we're keeping track of our changes for safety
-
-***Here's what we haven't done yet***
-
-7. Install a terminal multiplexer (service that makes terminal more efficient in terms of workflow) (TMUX)
-8. Install a terminal embedded text editor and configured it for efficiency/plugins (VIM)
-
-***Stop here and move on if time is limited.*** Tmux and Neovim are significant time sinks in learning actual programming. They do provide a lot of functionality and awesomesauce, and are definitely worth the investment. However, if you only have 3-15 days to learn, focusing on theory will prove to be far more beneficial than sinking a lot of time in auxillary technologies that don't deepen computational understanding.
-
-# Advanced Development Setup (Optional)
+You have downloaded the files on this repository onto your server in a directory named `python_data_science_tutorial`. You now have access to the other tutorials and resource files.
 
 ## 7. Terminal Multiplexer - TMUX
 ### 7a. Introduction
-Install using `brew install tmux`.
-
 Tmux allows users to have multiple 'little terminals' in one main terminal. Formally, it has:
->1. Sessions - a process/unit that is running on a system. You can close tmux and have sessions continue to run in the background. This is great for remote installations, AI training, or processes that are time consuming.
-2. Windows - ideologically identical to a tab in your web browser. A session can have multiple windows and you can navigate between windows.
-3. Panes - a division in your window/session (your window is your session if you have no other windows open). Divide your window vertically/horizontally in order to help with your workflow.
+1. Sessions - a process/unit that is running on a system. Tmux can be closed and have sessions continue in the background. This is great for remote installations, AI training, or processes that are time consuming
+2. Windows - ideologically identical to a tab in the web browser
+3. Panes - a division in the window/session. Divisions may occur horizontally or vertically
+
+Install using `brew install tmux`
 
 ### 7b. Commands
-Tmux also has something special called a prefix key. This will precede any command specific to tmux. By default, it is `CTRL + B`. I don't like this prefix key and I remap it in my configuration file which is made available to you.
+Tmux also has something special called a prefix key. This will precede any command specific to tmux. By default, it is `CTRL + B`. I remap the prefix to `CTRL + A` and provide this change to in `7c. Configure Tmux`
 
 For example, if you wanted to split your window vertically in Tmux, you would hit `CTRL + B` + `"`. To navigate between panes, you would use `<prefix> + o`. To split horizontally, `<prefix> + %`. To kill a pane, `<prefix> + x`.
 
 Try it for yourself. Run `tmux` and try to split your window vertically. Here are [shortcuts](https://gist.github.com/MohamedAlaa/2961058) and a [guide](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/).
 
-Run `exit` when you are done playing with tmux.
+Run `exit` when you are done playing.
 
-### 7c. Configure your Tmux
-I don't like some of the default commands in Tmux. So, I remmapped a bunch of them. I even changed the prefix key from `CTRL + B` to `CTRL + A`. This really only makes a difference if you change `CAPS LOCK` to `CTRL`, which I have done on my Mac (who uses `CAPS LOCK` these days anyway other than to yell at people on basketball forums?). I highly recommend remapping your `CAPS LOCK` to `CTRL` as it will prove beneficial in VIM.
+### 7c. Configure Tmux
+I don't like some of the default commands in Tmux. So, I remapped a bunch of them. I even changed the prefix key from `CTRL + B` to `CTRL + A`. This really only makes a difference if you change `CAPS LOCK` to `CTRL`, which I have done on my Mac (who uses `CAPS LOCK` these days anyway other than to yell at people on basketball forums?). I highly recommend remapping `CAPS LOCK` to `CTRL` as it will prove beneficial in Vim and Tmux. Go to `System Preferences->Keyboard->Modifier Keys` to change.
 
-Anyway, Tmux looks for a configuration file in your home directory. It is typically named `.tmux.conf`. If you were wondering what the `.` in front of a file name implies (think `.zshrc`), it suggests that the file is hidden and not available to users who do not know what they are doing. Since you know what you are doing, you can play with hidden files.
+Anyway, Tmux looks for a configuration file in the home directory named `.tmux.conf`. The `.` in the front of a filename (think `.zshrc`) suggests that the file is hidden and not available to users who do not know what they are doing. Since you know what you are doing, you can play with hidden files.
 
 Run the command:
-* `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/resources/.tmux.conf -o .tmux.conf -s`
+* `curl https://raw.githubusercontent.com/benjaminykim/python_data_science_tutorial/master/resources/.tmux.conf -o .tmux.conf -s`
 
-To see what instructions lie inside of this file, run the command `cat .tmux.conf` in order to peek inside. Read through the output of that command.
+Run the command `cat .tmux.conf` in order to peek at the configuration file.
 
-Make sure you restart your terminal in order to source the .tmux.conf file.
+Make sure you restart your terminal in order to source the `.tmux.conf` or else tmux will not update it's configuration file and these changes will not be implemented.
 
-**here are some .tmux.conf specific commands**
+**.tmux.conf specific commands**
 
 |Name|Command|
 |-----|-----|
@@ -174,75 +156,113 @@ Make sure you restart your terminal in order to source the .tmux.conf file.
 
 To start up Vim, run the command `vim myFirstFile.txt`. You have now entered Vim's development environment.
 
-Vim is good for quick script writing and fast development. If you need a debugger something more hefty is preferable. For our purposes, Vim/Atom and Jupyter Notebook are more than sufficient. Choose Atom for a 20X smaller learning curve.
+Vim is well used for quick script writing and fast development. If a debugger or more complex software tool is needed, an integrated development environment (IDE) is recommended. For the purposes of these learning modules, Vim/Atom and Jupyter Notebook are  sufficient.
 
-#### Vim Modes (N, I, V)
+##### Vim Modes (N, I, V)
 The default user mode is `Normal`. The others are `Insert` and `Visual`. For our notebooks only normal `N` and insert `I` are necessary. You can run commands in `N` normal and write text in `I` insert modes.
 
-* Enter `i` in the keyboard and observe the change from `N` to `I` modes.
-* You may now enter text.
-* Enter `My first file`
+* Enter `i` in the keyboard and observe the change from `N` to `I` modes
+* Enter `Hello World`
 
-#### Save and Exit your File (Write and Quit)
+##### Save and Exit your File (Write and Quit)
 
-Now we will save the file. In order to save, we must be in `N` normal mode.
+Use `N` mode to save the file and exit.
 
-* Enter `<ESC>` and observe the change from insert to normal mode.
-* Now you may run commands in Vim.
-* Now you may save your file.
-* Enter `:w` and hit enter.
-* Enter `:q` and hit enter.
+* Enter `<ESC>` and observe the change from insert to normal mode
+* Enter `:w` and hit enter (write)
+* Enter `:q` and hit enter (quit)
 
-`w` command will write your file (save). `q` command will quit Vim (exit). You may save and exit by `:wq`.
+**Note**:  save and exit in one command by using `:wq`
 
-#### Integration:
-Enter your file again using `vim`. Add some more text to the file, save and exit. Now print the contents of the file to standard output. In module 7c Configure Your Tmux we introduce a command that can accomplish this task for you.
+##### Integration:
+Let's verify that our file has the string `Hello World` inside of it by using a command introduced in module `7c. Configure Your Tmux`.
 
 ### 8b. Commands
-Navigating in Vim is challenging but rewarding. Never use the arrow keys to navigate inside your Vim environment. Instead use `h` `j` `k` `l` as Left, Down, Up, Right. I use mnemonic devices `J goes DOWNtown` and `Kite Up` for vertical navigation and the spatial relation of `h` and `l` for horizontal. ***Never use your arrow keys***.
+##### Navigation
+* `h` - left
+* `j` - down
+* `k` - up
+* `l` - right
 
-To go one word forward, use `w`; one word back, use `b`. To go x words forward/back, enter the number `x` and `w`/`b`.
-To go x lines up/down, enter the number and `k`/`j`.
+Navigating in Vim is challenging but rewarding. Use `h` `j` `k` `l` as Left, Down, Up, Right. Mnemonic devices `Jump Down` and `Kite Up` and the spatial relation of `h` and `l`. ***Never use your arrow keys***.
 
-Use `Shift + G` for bottom of file, `g + g` for top of file. Shift bottom g-g up.
+##### Inline Navigation
+* `w` - one word forward
+* `b` - one word backward
+* `<number>` + `w`/`b` - number word(s) forward/backward
+* `<number>` + `j`/`k` - number line(s) down/up
+* `0` - move to beginning of line
+* `$` - move to end of line
 
-Enter a valid line number and use `Shift + G` to move to that line.
 
-Use `0` zero to go to the beginning of a line. Use `$` to go to the end. They are opposite spatially on the keyboard to how they move the cursor inline in Vim.
+##### File Navigation
+* `Shift + g` - move to bottom of file
+* `g + g` - move to top of file
+* `<number>` + `Shift + g` - move to line number
 
-#### Deletion
-These all stay in normal mode unless specified otherwise.
-* `x` deletes a character.
-* `d` deletes from where the cursor is until where it ends after navigation (use `d1w` to delete until the beginning of the next word, `d2j` to delete two lines down, `d + Shift + g` to delete until the bottom of the file`).
-* `d + d` deletes the current line.
-* `s` deletes the current character and enters `I` mode.
+##### Screen Navigation
+* `H` - move to top of screen
+* `M` - move to middle of screen
+* `L` - move to bottom of screen
 
-#### Insertion
-These all enter insert mode
-* `o` creates a new line below and enters insert mode, moving cursor along
-* `O` creates a new line above and enters insert mode, moving cursor along
-* `a` enters insert mode one character after the cursor
+##### Undo
+* `u` - undo change(s)
 
-#### Copy
-* `y` copies text from current position until navigation end
-* `y + y` copies the current line
-* `p` pastes
+##### Deletion
+* `x` - delete a character
+* `d` deletes from where the cursor is until navigation
+  * `d1w` - delete one word
+  * `d2j` - delete two lines down  
+  * `d + Shift + g` - delete until the bottom of the file
+* `d + d` - delete the current line
+* `s` - delete the current character and enters `I` mode
 
-#### Search
-* In `N` mode, enter `/` and enter your search word
-* You may navigate through the matches using `n` and `p`.
-* You may cancel highlights by entering command `:noh` (no highlight)
+##### Insertion
+* `o` - create a new line below
+* `O` - create a new line above
+* `a` - enter insert mode one character after the cursor
 
-#### Alternative Save and Exit
-Use `Shift + Z + Z` to write and quit your file. If there are no changes, it will not override the write (subtle difference, creates efficiency for large files and updating as you won't need to reupload a file to a remote database just because you wanted to inspect it in Vim).
+##### Copy
+* `y` - copy text from current position until navigation (just like delete)
+* `y + y` - copy the current line
+* `p` - paste
 
-This is an extremely thorough beginners look at Vim, but it will open doors for 95% of typical usecase in the editor. However, this is not a comprehensive capture of Vim. There is so much more one can do...
+##### Search
+* Enter `/` and search word
+* Navigate through matches using `n` and `p`
+* Turn off highlights with command `:noh` (no highlight)
 
-### 8c. Configure your Vim
-Run `curl https://raw.githubusercontent.com/benjaminykim/dev_tut/master/resources/.vimrc -o .vimrc -s`
-Your Vim is now configured. Check out the contents again and skim through things. The three things to take away are:
-1. You can now enter `N` mode using `jk` or `kj` in `I` mode.
-    * this ensures your left hand doesn't have to move to much in order to enter `N` mode. This is advantageous because pressing `ESC` to enter normal mode every time can be time consuming.
-2. You can now move text tabularly in `N` mode.
-    * Use `SHIFT + TAB` or `TAB` to move text backward/forward
-3. You can now save using `CTRL + S` in `N` mode. If you remapped `CAPS LOCK` to `CTRL` as suggested earlier, this becomes even more useful.
+##### Alternative Save and Exit
+If there are no changes made to the file, it will not override the written file and simply exit Vim.
+* `Shift + Z + Z` - write file and quit Vim
+
+If you believe an intelligent text editor should be able to do something, the odds are that Vim can.
+
+### 8c. Configure Vim
+Run `curl https://raw.githubusercontent.com/benjaminykim/python_data_science_tutorial/master/resources/.vimrc -o .vimrc -s`
+
+Your Vim is now configured. Inspect the contents of the `.vimrc` file. The main features are:
+* Enter `N` mode by using `jk` or `kj` in `I` mode
+  * this ensures your left hand doesn't have to move to much in order to enter `N`
+  * pressing `ESC` to enter `N` takes time and causes strain to the left pinky (vim/emacs pinky phenomena)
+* Move text tabularly in `N` mode
+  * Use `SHIFT + TAB` or `TAB` to move text backward/forward by a tab
+* Save using `CTRL + S` in `N` mode
+  * If you remapped `CAPS LOCK` to `CTRL` as suggested earlier, this becomes even more useful. Remapping `CAPS LOCK` mitigates the vim/emacs pinky
+
+## 9. Conclusion
+***What can we do with all we've done?***
+* iterm2 to manage your system, run programs, code, download libraries, share code, and train AI
+* brew to deal with installations
+* zsh to do make everything easier in terminal
+* atom to write code
+* jupyter notebook to make beautiful visualizations and write sharable, interactive code
+* github to share our files and track changes for safety
+* tmux to organize our terminal activities
+* vim to write code
+
+***What should I keep in mind?***<br>
+Vim is hard to use, but consistency over time brings efficiency and mastery. Git is an essential toolkit of any modern developer. All configuration files provided are basic, which is out of design as it grants others the freedom to customize these services as they like. Take a look online for what other people have done with their shell, tmux, and vim configurations.
+
+### What's next?
+Run jupyter notebook. You may open `Linux Tutorial.ipynb` inside of Jupyter hub for the next tutorial.

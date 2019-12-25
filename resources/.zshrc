@@ -1,3 +1,4 @@
+#export PATH=~/anaconda3/bin:"$PATH"
 # OH MY ZSH
 export ZSH=".oh-my-zsh"
 ZSH_THEME="agnoster"
