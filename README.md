@@ -13,3 +13,4 @@ Start with:
 2. [Linux Tutorial](https://github.com/benjaminykim/python_data_science_tutorial/blob/master/tutorials/Linux%20Tutorial.md)
 3. Jupyter Notebook Tutorial (open inside jupyter notebook)
 4. Python Tutorial (open inside jupyter notebook)
+5. Data Manipulation Tutorial (open inside jupyter notebook)
